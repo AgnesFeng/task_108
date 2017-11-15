@@ -1,0 +1,154 @@
+<!DOCTYPE>
+<html>
+<head>
+
+     <meta charset="utf-8">
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <style type="text/css">
+         h1 {text-align: center}
+         p{text-indent: 1em;}
+         input[type="text"]
+         {
+           width:120px;
+           /*display:block;   导致了自动换行 */ 
+           background-color:white;
+         }
+         .leftmargin {margin-left: 1cm} 
+         .form-group {
+          margin-left: 20px;
+          margin-right: 80px;
+         }
+         .left  /*没用到*/
+        {
+        position:absolute;
+        left:0px;
+        width:300px;
+        background-color:#b0e0e6;
+        }
+        .text-overflow{   /*没用到*/
+        display:block;                     /*内联对象需加*/
+        word-break:keep-all;           /* 不换行 */
+        white-space:nowrap;          /* 不换行 */
+        overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
+        text-overflow:ellipsis;  /* 当对象内文本溢出时显示省略标记(...)需与overflow:hidden;一起使用。*/
+        }
+     </style>
+
+</head>
+
+<body>
+<h1> 统一建模语言理论测试 </h1>
+<div class="row">
+    <div class="col-xs-4 col-md-4 ">
+        <p>考试科目：统一建模语言</p>
+        <p id="stu_class">班级：<input type="text"  ></p>
+    </div>
+    <div class="col-xs-4 col-md-4">
+        <p>时间：100分钟</p>
+        <p >学号: <input id="stu_num" type="text"  ></p>
+    </div>
+    <div class="col-xs-4 col-md-4">
+        <p>得分：100</p>   
+        <p >姓名：<input type="text" id="stu_name"  ></p>
+    </div>
+</div>
+
+    
+
+<h2> 一、填空题（每空5分，共20分） </h2> 
+<p > 
+1.UML的中文全称是： <input type="text"  id="a1"> <p/>
+<p > 
+2.对象最突出的特征是： <input type="text" id="b1"> <input type="text" id="b2"> <input type="text" id="b3"</p>
+<br/>
+
+<h2> 二、选择题（每题10分，共20分） </h2> 
+<p > 1.UML与软件工程的关系是：</p>
+<div class"container">
+  <div class="row" >
+    <div class="leftmargin col-md-12 ">
+        <input type="radio" name="Sex"  />(A)UML就是软件工程 <br/>
+        <input type="radio"  name="Sex"  />(B)UML参与到软件工程中软件开发过程的几个阶段<br/>
+        <input type="radio" name="Sex"  />(C)UML与软件工程无关 <br/>
+        <input type="radio" name="Sex"  />(D)UML是软件工程的一部分 <br/>
+    </div>
+  </div>
+</div>
+<br/>
+
+<p > 2.Java语言支持：</p>
+
+<div class"container">
+  <div class="row" >
+    <div class="leftmargin col-md-12 ">
+        <input type="radio" name="ex"  />(A)单继承
+    </div>
+    <div class="leftmargin col-md-12">
+         <input type="radio"  name="ex" />(B)多继承
+    </div>
+    <div class="leftmargin col-md-12">
+        <input type="radio" name="ex" />(C)单继承和多继承都支持
+    </div>
+    <div class="leftmargin col-md-12">
+        <input type="radio" name="ex"  />(D)单继承和多继承都支持
+    </div>
+  </div>
+</div>
+
+
+<h2> 三、多择题（每题10分，共20分） </h2> 
+<p > 1.用例的粒度分为以下哪三种：</p>
+  <div class="leftmargin">
+    <input type="checkbox" name="mul"  />(A)概述级 <br/>
+    <input type="checkbox"  name="mul" value="male" />(B)需求级 <br/>
+    <input type="checkbox" name="mul" value="male" />(C)用户目标级 <br/>
+    <input type="checkbox" name="mul" value="male" />(D)子功能级
+  </div>
+  <br/>
+<p > 2.类图由以下那三部分组成：</p>
+ <div class="leftmargin">
+    <input type="checkbox"  name="mul2" value="male" />(A)名称 <br/>
+    <input type="checkbox"  name="mul2"/>(B)属性 <br/>
+    <input type="checkbox"  name="mul2"/>(C)操作 <br/>
+    <input type="checkbox" name="mul2"/>(D)方法 <br/>
+</div>
+
+<h2> 四、判断题（每题10分，共20分） </h2> 
+
+<p > 1、用例图只是用于和客户交流和沟通的，用于确定需求。
+    <input type="radio" name="1"/> &radic;
+    <input type="radio" name="1"/><label>&Chi; </label>
+</p>
+<p >2、在状态图中，终止状态在一个状态图中允许有任意多个。
+    <input name="2" type="radio" /> &radic;
+    <input name="2" type="radio"/>&Chi;
+</p>
+
+<h2> 五、简答题（每题20分，共20分） </h2> 
+<p > 1.简述什么是模型及模型的表现形式：</p>
+
+
+   <textarea  class="leftmargin" id="fillarea" rows="5" cols="70">   </textarea>
+
+
+
+<!--form role="form">
+   <div class="form-group">
+    <label for="name">1.简述什么是模型以及模型的表现形式。</label>
+    <textarea class="form-control" rows="3" cols="70"> 模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以是某种图形；或者是一种数学表达式。"</textarea>
+  </div>
+</form-->
+<br/>
+<br/>
+<button id="count" class="leftmargin btn btn-primary" type="button"  onclick="output_count()">提交分数</button>
+<br/>
+</body>
+
+<link  href ="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</html>
+
+
+
