@@ -19,7 +19,7 @@ function fill_block(){
 
 function single_select() {
     let single = 0;
-    let du = document.getElementsByName("sex");
+    let du = document.getElementsByName("Sex");
     if(du[1].checked && du[0].checked == false && du[2].checked == false && du[3].checked == false){
         single +=10;
     }
@@ -66,11 +66,12 @@ function fill_area() {
 //最好分开，有个计算函数，有个输出函数
 function output_count(){
 
-    var stu_class = document.getElementById("stu_class").childNodes.value;
-    var stu_num = document.getElementById("stu_num").value;
+    var stu_class = document.getElementById("stu_class").childNodes[1].value;
+   // console.log(document.getElementById("stu_class").childNodes[1].value);
     var stu_name = document.getElementById("stu_name").value;
     let sum = fill_block() + single_select() + multi_select() + judge_tf() + fill_area();
-    document.getElementById("count").innerHTML = "总分"+sum;
+    //let sum = fill_block() + multi_select() + judge_tf() + fill_area();
+    document.getElementById("count").innerHTML = "总分："+sum;
     alert(stu_class+"班"+stu_name + "的得分是" + sum);
 }
 

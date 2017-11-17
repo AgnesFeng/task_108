@@ -48,7 +48,7 @@
         <p >学号: <input id="stu_num" type="text"  ></p>
     </div>
     <div class="col-xs-4 col-md-4">
-        <p>得分：100</p>   
+        <p id="count">得分：</p>
         <p >姓名：<input type="text" id="stu_name"  ></p>
     </div>
 </div>
@@ -67,10 +67,10 @@
 <div class"container">
   <div class="row" >
     <div class="leftmargin col-md-12 ">
-        <input type="radio" name="Sex"  />(A)UML就是软件工程 <br/>
-        <input type="radio"  name="Sex"  />(B)UML参与到软件工程中软件开发过程的几个阶段<br/>
-        <input type="radio" name="Sex"  />(C)UML与软件工程无关 <br/>
-        <input type="radio" name="Sex"  />(D)UML是软件工程的一部分 <br/>
+        <input type="radio" name="Sex" id="radio1" />(A)UML就是软件工程 <br/>
+        <input type="radio"  name="Sex" id="radio1" />(B)UML参与到软件工程中软件开发过程的几个阶段<br/>
+        <input type="radio" name="Sex" id="radio1" />(C)UML与软件工程无关 <br/>
+        <input type="radio" name="Sex" id="radio1" />(D)UML是软件工程的一部分 <br/>
     </div>
   </div>
 </div>
@@ -140,7 +140,7 @@
 </form-->
 <br/>
 <br/>
-<button id="count" class="leftmargin btn btn-primary" type="button"  onclick="output_count()">提交分数</button>
+<button  class="leftmargin btn btn-primary" type="button"  onclick="output_count()">提交分数</button>
 <br/>
 </body>
 
