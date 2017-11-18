@@ -2,15 +2,18 @@
 
 function fill_block(){
     let fillblock = 0;
-    let fillblockAnswer = ["统一建模语言", "封装性", "继承性", "多态性"];
-    if (document.getElementById("a1")==fillblockAnswer[0]);
-    fillblock +=5;
-    fillblockAnswer.map(function (temp,index,array) {
-        if(temp == document.getElementById("b1").value && array.indexOf(temp)==index) //避免重复出现
+    let fillblockAnswer = [ "封装性", "继承性", "多态性"];
+        if (document.getElementById("a1")=="统一建模语言"){
+		fillblock +=5;
+	}
+	//把三个空的值的存到一个数组里面
+    let fillArr = [document.getElementById("b1").value, document.getElementById("b2").value, document.getElementById("b3").value];
+    fillArr.map(function (temp,index,array) {
+        if(temp === fillblockAnswer[0] && array.indexOf(temp)===index) //避免重复出现
             fillblock +=5;
-        if(temp == document.getElementById("b2").value && array.indexOf(temp)==index) //避免重复出现
+        if(temp === fillblockAnswer[1] && array.indexOf(temp)===index) //避免重复出现
             fillblock +=5;
-        if(temp == document.getElementById("b3").value && array.indexOf(temp)==index) //避免重复出现
+        if(temp === fillblockAnswer[2] && array.indexOf(temp)===index) //避免重复出现
             fillblock +=5;
         return fillblock;
     });
@@ -57,21 +60,24 @@ function judge_tf(){
 }
 function fill_area() {
     let fillarea = 0
-    let fa = document.getElementById("fillarea");
-    if(fa.innerHTML == "模型是对现实世界的简化和抽象，模型是对所有研究的系统，过程，事物或概念的一种表达形式，可以是物理实体；可以是某图形；或者是一种数学表达式。")
-    fillarea += 20;
+    let fa = document.getElementById("fillarea").value;//此处不能用Html和Text
+
+    if(fa == "模型是对现实世界的简化和抽象，模型是对所有研究的系统，过程，事物或概念的一种表达形式，可以是物理实体；可以是某图形；或者是一种数学表达式。")
+
+        fillarea += 20;
     return fillarea;
 }
 
 //最好分开，有个计算函数，有个输出函数
 function output_count(){
-
+    console.log(document.getElementById("fillarea").value);
     var stu_class = document.getElementById("stu_class").childNodes[1].value;
-   // console.log(document.getElementById("stu_class").childNodes[1].value);
+      console.log(document.getElementById("stu_class").childNodes[1]);
     var stu_name = document.getElementById("stu_name").value;
     let sum = fill_block() + single_select() + multi_select() + judge_tf() + fill_area();
     //let sum = fill_block() + multi_select() + judge_tf() + fill_area();
     document.getElementById("count").innerHTML = "总分："+sum;
+
     alert(stu_class+"班"+stu_name + "的得分是" + sum);
 }
 
